@@ -1,0 +1,80 @@
+[
+  {
+    "id": "county-01",
+    "name": "Liberty County Roleplay",
+    "type": "Roleplay",
+    "language": "English",
+    "description": "Professional departments, serious roleplay, and a community that keeps the radio clear.",
+    "members": 8420,
+    "invite": "",
+    "discordGuildId": "",
+    "lastBump": "2026-10-15T12:00:00Z",
+    "tags": ["Whitelisted"],
+    "verified": true
+  },
+  {
+    "id": "county-02",
+    "name": "Statewide Emergency Services",
+    "type": "Roleplay",
+    "language": "English",
+    "description": "A welcoming home for fire, law enforcement, and civilian roleplayers.",
+    "members": 5210,
+    "invite": "",
+    "discordGuildId": "",
+    "lastBump": "2026-10-15T10:30:00Z",
+    "tags": ["Active", "All departments"],
+    "verified": true
+  },
+  {
+    "id": "county-03",
+    "name": "Northstar Design Studio",
+    "type": "Design",
+    "language": "English",
+    "description": "Custom liveries, uniforms, and visual identity for ERLC communities.",
+    "members": 3160,
+    "invite": "",
+    "discordGuildId": "",
+    "lastBump": "2026-10-14T22:15:00Z",
+    "tags": ["Creative"],
+    "verified": false
+  },
+  {
+    "id": "county-04",
+    "name": "County Connector Network",
+    "type": "Advertising",
+    "language": "English",
+    "description": "Promotion and discovery for ERLC communities and creators.",
+    "members": 1980,
+    "invite": "",
+    "discordGuildId": "",
+    "lastBump": "2026-10-14T19:40:00Z",
+    "tags": ["Community promotion"],
+    "verified": false
+  },
+  {
+    "id": "county-05",
+    "name": "ERLC Utility Bots",
+    "type": "ERLC Bots",
+    "language": "English",
+    "description": "Tools and automation built for ERLC roleplay communities.",
+    "members": 11400,
+    "invite": "",
+    "discordGuildId": "",
+    "lastBump": "2026-10-14T17:05:00Z",
+    "tags": ["Tools"],
+    "verified": true
+  },
+  {
+    "id": "county-06",
+    "name": "County Creator Hub",
+    "type": "Design",
+    "language": "English",
+    "description": "A studio community for maps, graphics, and server branding.",
+    "members": 760,
+    "invite": "",
+    "discordGuildId": "",
+    "lastBump": "2026-10-13T20:20:00Z",
+    "tags": ["Portfolio"],
+    "verified": false
+  }
+]
