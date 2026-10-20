@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="Discover and share ER:LC roleplay servers on StarConnecting.">
+  <title>StarConnecting — ER:LC Server Directory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./config.js"></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="StarConnecting home">
+        <span class="brand-mark">S<span>.</span></span>
+        <span>StarConnecting</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#directory">Directory</a>
+        <a class="nav-link" href="#about">About</a>
+        <button class="button button-light top-submit" type="button" data-open-submit>+ Add a server</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro" id="about">
+        <div class="intro-main">
+          <p class="eyebrow"><span class="status-dot"></span> THE ER:LC SERVER DIRECTORY</p>
+          <h1>Find your next<br><span>roleplay.</span></h1>
+          <p class="intro-text">A home for Emergency Response: Liberty County communities. Discover a server, meet its people, and find your next session.</p>
+          <div class="intro-actions">
+            <a class="button button-light" href="#directory">Explore servers <span aria-hidden="true">↘</span></a>
+            <button class="button button-quiet" type="button" data-open-submit>+ Add a server</button>
+          </div>
+        </div>
+        <aside class="intro-aside">
+          <div class="intro-index mono">SC / 001</div>
+          <div class="stat-block">
+            <span class="stat-value" id="server-count">—</span>
+            <span class="stat-label">COMMUNITIES LISTED</span>
+          </div>
+          <div class="stat-rule"></div>
+          <p class="aside-note">Made for the people who make every session memorable.</p>
+          <p class="aside-foot mono">COMMUNITY-DRIVEN · ER:LC</p>
+        </aside>
+      </section>
+
+      <section class="directory-section" id="directory">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">BROWSE THE COMMUNITY</p>
+            <h2>Server directory<span class="period">.</span></h2>
+          </div>
+          <p class="section-note">Find a community that fits your style.</p>
+        </div>
+
+        <div class="directory-controls">
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="sr-only">Search servers</span>
+            <input id="search" type="search" placeholder="Search servers..." autocomplete="off">
+            <kbd> / </kbd>
+          </label>
+          <div class="control-right">
+            <label class="select-wrap">
+              <span class="sr-only">Filter by server type</span>
+              <select id="type-filter">
+                <option value="all">All server types</option>
+                <option value="roleplay">Roleplay</option>
+                <option value="realism">Realism</option>
+                <option value="community">Community</option>
+                <option value="training">Training</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label class="select-wrap">
+              <span class="sr-only">Sort servers</span>
+              <select id="sort-filter">
+                <option value="newest">Newest first</option>
+                <option value="name">Name A–Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="list-meta">
+          <span id="result-count">Loading servers…</span>
+          <span class="meta-right mono">STARCONNECTING / DIRECTORY</span>
+        </div>
+
+        <div class="directory-layout">
+          <div class="server-list" id="server-list" aria-live="polite">
+            <div class="loading-state"><span class="spinner"></span> Loading the directory…</div>
+          </div>
+          <aside class="side-column">
+            <div class="side-panel">
+              <p class="eyebrow">HOW IT WORKS</p>
+              <h3>Your next community is closer.</h3>
+              <p>Browse listings, check out the server details, and join through its Discord invite.</p>
+              <div class="side-number mono">01 — DISCOVER</div>
+              <div class="side-number mono">02 — CONNECT</div>
+              <div class="side-number mono">03 — ROLEPLAY</div>
+            </div>
+            <div class="side-panel bump-panel">
+              <span class="mini-mark">✳</span>
+              <h3>Run a server?</h3>
+              <p>Share your community with players looking for their next session.</p>
+              <button class="text-button" type="button" data-open-submit>Add your listing <span>↗</span></button>
+            </div>
+            <p class="side-footer mono">BUILT FOR THE COMMUNITY.</p>
+          </aside>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-symbol">∅</span>
+          <h3>No servers found.</h3>
+          <p>Try changing your search or filters.</p>
+          <button class="text-button" id="clear-filters" type="button">Clear filters ↗</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <a class="wordmark footer-wordmark" href="#top"><span class="brand-mark">S<span>.</span></span><span>StarConnecting</span></a>
+      <p>Independent community directory. Not affiliated with Roblox or Emergency Response: Liberty County.</p>
+      <a href="#top" class="back-top">BACK TO TOP ↑</a>
+    </footer>
+  </div>
+
+  <dialog id="submit-dialog" class="listing-dialog">
+    <form id="listing-form" class="dialog-form" novalidate>
+      <div class="dialog-head">
+        <div><p class="eyebrow">COMMUNITY SUBMISSION</p><h2>Add a server<span class="period">.</span></h2></div>
+        <button class="icon-button" type="button" data-close-dialog aria-label="Close dialog">×</button>
+      </div>
+      <p class="dialog-intro">Tell players what makes your community worth joining.</p>
+      <label class="field-label">Server name <span>*</span>
+        <input name="name" maxlength="70" required placeholder="e.g. Los Angeles Roleplay">
+      </label>
+      <div class="form-row">
+        <label class="field-label">Server type <span>*</span>
+          <select name="type" required>
+            <option value="">Choose a type</option>
+            <option value="roleplay">Roleplay</option>
+            <option value="realism">Realism</option>
+            <option value="community">Community</option>
+            <option value="training">Training</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label class="field-label">Language
+          <select name="language">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      </div>
+      <label class="field-label">Description <span>*</span>
+        <textarea name="description" required minlength="20" maxlength="500" rows="4" placeholder="What can players expect? (20–500 characters)"></textarea>
+        <span class="form-hint">20–500 characters.</span>
+      </label>
+      <label class="field-label">Discord invite URL <span>*</span>
+        <input name="invite" type="url" required placeholder="https://discord.gg/yourinvite">
+      </label>
+      <label class="field-label">Discord server ID <span class="optional">(optional)</span>
+        <input name="discordGuildId" inputmode="numeric" maxlength="25" placeholder="For example, 123456789012345678">
+      </label>
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+      <div class="dialog-actions">
+        <button class="button button-quiet" type="button" data-close-dialog>Cancel</button>
+        <button class="button button-light submit-button" id="submit-button" type="submit">Submit listing <span>↗</span></button>
+      </div>
+      <p class="form-hint bottom-hint">Only submit communities you are authorized to represent. Submissions may be reviewed before appearing.</p>
+    </form>
+  </dialog>
+
+  <dialog id="detail-dialog" class="listing-dialog detail-dialog">
+    <div id="detail-content"></div>
+    <button class="icon-button detail-close" type="button" data-close-detail aria-label="Close details">×</button>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
