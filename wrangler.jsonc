@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "starconnecting-api",
+  "main": "index.js",
+  "compatibility_date": "2026-10-20",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "starconnecting-db",
+      "database_id": "REPLACE_WITH_YOUR_REAL_D1_DATABASE_ID"
+    }
+  ]
+}
